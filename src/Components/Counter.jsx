@@ -14,13 +14,14 @@ function Counter() {
     
     return (
       <>
+      <div className='bg-gray-500'>
        <h1>Simple Counter</h1>
-
-        <div className='flex justify-center items-center bg-gray-500'>
-          <button className='mr-5  p-2 bg-gray-400 font-bold' onClick={increment}>+</button>
+        <div className='flex justify-center items-center '>
+          <button className='mr-5  p-2 border border-black font-bold' onClick={increment}>+</button>
           <p>{counter}</p>
-          <button className='ml-5  p-2 bg-gray-400 font-bold '  onClick={decrement}>-</button>
+          <button className='ml-5  p-2 border border-black font-bold '  onClick={decrement}>-</button>
         </div>
+      </div>
       </>
     )
   }
