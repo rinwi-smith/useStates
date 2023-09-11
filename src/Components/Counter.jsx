@@ -16,10 +16,10 @@ function Counter() {
       <>
       <div className='bg-gray-500'>
        <h1>Simple Counter</h1>
-        <div className='flex justify-center items-center '>
-          <button className='mr-5  p-2 border border-black font-bold' onClick={increment}>+</button>
+        <div className='flex justify-center items-center text-white'>
+          <button className='mr-5  p-2 border border-black rounded-lg font-bold' onClick={increment}>+</button>
           <p>{counter}</p>
-          <button className='ml-5  p-2 border border-black font-bold '  onClick={decrement}>-</button>
+          <button className='ml-5  p-2 border border-black rounded-lg font-bold '  onClick={decrement}>-</button>
         </div>
       </div>
       </>
