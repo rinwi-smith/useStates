@@ -25,11 +25,11 @@ function TodoList() {
       <h2>Todo List</h2>
       <input type="text" value={text} onChange={handleInputChange} className=' bg-gray-200 border border-solid border-[#000]' />
       <button className='ml-5 border border-gray-950 p-2 rounded-lg'  onClick={handleAddItem}>Add</button>
-      <ul>
+      <ul className='mt-5'>
         {items.map((item, index) => (
           <li key={index}>
             {item}
-            <button onClick={() => handleRemoveItem(index)}>Remove</button>
+            <button className='ml-5 border border-gray-950 p-2 rounded-lg'   onClick={() => handleRemoveItem(index)}>Remove</button>
           </li>
         ))}
       </ul>
