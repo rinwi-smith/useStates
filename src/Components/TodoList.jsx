@@ -24,7 +24,7 @@ function TodoList() {
     <div className='mt-10 bg-gray-300'>
       <h2>Todo List</h2>
       <input type="text" value={text} onChange={handleInputChange} className=' bg-gray-200 border border-solid border-[#000]' />
-      <button onClick={handleAddItem}>Add</button>
+      <button className='ml-5 border border-gray-950 p-2 rounded-lg'  onClick={handleAddItem}>Add</button>
       <ul>
         {items.map((item, index) => (
           <li key={index}>
