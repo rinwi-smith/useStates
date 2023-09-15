@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react';
 
 function TodoList() {
@@ -16,7 +17,7 @@ function TodoList() {
   };
 
   const handleRemoveItem = (index) => {
-    const updatedItems = items.filter((_, i) => i !== index);
+    const updatedItems = items.filter((_, i) => i == index);
     setItems(updatedItems);
   };
 

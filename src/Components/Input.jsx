@@ -1,4 +1,5 @@
 // import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 
 function Input() {
@@ -7,6 +8,7 @@ function Input() {
     const handleChange = (event) => {
         setInputValue(event.target.value);
     }
+
   return (
     <div className='mt-10 bg-gray-300' >
     <h1>Input Field</h1>
@@ -16,5 +18,5 @@ function Input() {
   )
 }
 
-export default Input
+export default Input;
 
