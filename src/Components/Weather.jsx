@@ -6,6 +6,7 @@ const API_KEY = 'bf2e707337d31191b20bb7b470612bb9';
 
 const WeatherApp = () => {
   const [location, setLocation] = useState('');
+  const [enteredLocation, setEnteredLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
   
@@ -38,6 +39,8 @@ const WeatherApp = () => {
     // Fetch weather data based on the user's input
     if (location) {
       fetchData();
+      setEnteredLocation(location);
+      setLocation('')
     }
   };
 
@@ -62,7 +65,7 @@ const WeatherApp = () => {
 
       {weatherData && (
         <div>
-          <h3>Current Weather in {location}</h3>
+          <h3>Current Weather in {enteredLocation}</h3>
           <p>Temperature: {weatherData.main.temp} K</p>
           <p>Description: {weatherData.weather[0].description}</p>
           {/* Add additional weather data properties as needed */}
