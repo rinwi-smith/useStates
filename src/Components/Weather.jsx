@@ -8,23 +8,26 @@ const WeatherApp = () => {
   const [location, setLocation] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
+  
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`
+          `https://api.openweathermap.org/data/2.5/weather?q=${location.toLocaleLowerCase()}&appid=${API_KEY}`
         );
         setWeatherData(response.data);
+        setError(null);
       } catch (error) {
-        setError(error.message);
+        setError('Weather data not found for the specified location.'
+        );
+        setWeatherData(null);
       }
     };
 
-    if (location) {
-      fetchData();
-    }
-  }, [location]);
+    // useEffect( () => {
+    //     if (location) {
+    //       fetchData();
+    //     }
+    //   }, [location]);
 
   const handleLocationChange = (e) => {
     setLocation(e.target.value);
@@ -38,9 +41,9 @@ const WeatherApp = () => {
     }
   };
 
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
+//   if (error) {
+//     return <div>Error: {error}</div>;
+//   }
 
   return (
     <div>
@@ -54,6 +57,8 @@ const WeatherApp = () => {
         />
         <button type="submit">Get Weather</button>
       </form>
+
+      {error && !weatherData && <div>Error: {error}</div>}
 
       {weatherData && (
         <div>
