@@ -44,10 +44,6 @@ const WeatherApp = () => {
     }
   };
 
-//   if (error) {
-//     return <div>Error: {error}</div>;
-//   }
-
   return (
     <div>
       <h2>Weather App</h2>
