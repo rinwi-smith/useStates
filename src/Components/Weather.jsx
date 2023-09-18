@@ -24,12 +24,6 @@ const WeatherApp = () => {
       }
     };
 
-    // useEffect( () => {
-    //     if (location) {
-    //       fetchData();
-    //     }
-    //   }, [location]);
-
   const handleLocationChange = (e) => {
     setLocation(e.target.value);
   };
