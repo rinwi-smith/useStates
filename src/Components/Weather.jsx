@@ -58,7 +58,7 @@ const WeatherApp = () => {
           <h3>Current Weather in {enteredLocation}</h3>
           <p>Temperature: {weatherData.main.temp} K</p>
           <p>Description: {weatherData.weather[0].description}</p>
-          {/* Add additional weather data properties as needed */}
+          
         </div>
       )}
     </div>
