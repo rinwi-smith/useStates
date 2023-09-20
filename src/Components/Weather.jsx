@@ -39,7 +39,7 @@ const WeatherApp = () => {
   };
 
   return (
-    <div>
+    <div className='mt-10 bg-gray-500 text-white'>
       <h2>Weather App</h2>
       <form onSubmit={handleFormSubmit}>
         <input
