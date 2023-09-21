@@ -48,7 +48,7 @@ const WeatherApp = () => {
           onChange={handleLocationChange}
           placeholder="Enter location"
         />
-        <button type="submit">Get Weather</button>
+        <button className='ml-5 border border-gray-950 p-2 rounded-lg' type="submit">Get Weather</button>
       </form>
 
       {error && !weatherData && <div>Error: {error}</div>}
